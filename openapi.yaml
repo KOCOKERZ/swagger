@@ -2,9 +2,7 @@ openapi: 3.0.3
 info:
   title: DOKUMEN API GIS AKBAR - OpenAPI 3.0
   description: >-
-    Jelaskan disini apa saja yang perlu dijelaskan
-    termasuk informasi yang diperlukan untuk dinilai
-    term of service isi dari link repo dari swagger ini
+    Kumpulan Dokumen API AKBAR
   termsOfService: https://github.com/KOCOKERZ/swagger
   contact:
     email: fitrahaliakbar@gmail.com
