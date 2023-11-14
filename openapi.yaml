@@ -2,9 +2,7 @@ openapi: 3.0.3
 info:
   title: DOKUMEN API GIS AKBAR - OpenAPI 3.0
   description: >-
-    Jelaskan disini apa saja yang perlu dijelaskan
-    termasuk informasi yang diperlukan untuk dinilai
-    term of service isi dari link repo dari swagger ini
+    Dokumen API Akbar - GIS
   termsOfService: https://github.com/KOCOKERZ/swagger
   contact:
     email: fitrahaliakbar@gmail.com
@@ -16,21 +14,35 @@ externalDocs:
   description: Repo GCF
   url: https://pkg.go.dev/github.com/KOCOKERZ/BACKEND_GIS
 servers:
-  - url: https://asia-southeast2-core-advice-401502.cloudfunctions.net/
+  - url: https://asia-southeast2-core-advice-401502.cloudfunctions.net #POST
+  - url : https://asia-southeast2-core-advice-401502.cloudfunctions.net #SignIn
 tags:
   - name: Create GIS
     description: Data Geo Spasial
     externalDocs:
       description: Deskripsi dan Kode Program
       url: https://pkg.go.dev/github.com/KOCOKERZ/BACKEND_GIS
-  - name: auth
-    description: Auth to Access to API
-    externalDocs:
-      description: Deskripsi dan Kode Program
-      url: https://pkg.go.dev/github.com/KOCOKERZ/BACKEND_GIS
-  - name: user
-    description: Get Token and Authorize
 paths:
+  /CH5-Function-SignIn:
+    post:
+      tags:
+        - Sign In
+      summary: Pendaftaran User Baru
+      description: Pendaftaran untuk mendapatkan token
+      operationId: signUpNewUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignIn'
+      responses:
+        '200':
+          description: successful operation
+      security:
+        - Secret:
+            - write:apiKey
+            - read:apiKey
+
   /CH5-Function-1:  # Penambahan endpoint Create GIS
     post:
       tags:
@@ -56,6 +68,17 @@ paths:
                
 components:
   schemas:
+    SignIn:
+          type: object
+          properties:
+            username: 
+              type: string
+              example: username
+            password: 
+              type: string
+              example: password
+            
+          
     Peta:
       type: object
       properties:
