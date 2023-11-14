@@ -61,13 +61,13 @@ components:
           type: string
           example: "Feature"
         properties:
-          type: object
+          type: "Feature"
           properties:
-            name:
+            name: LOCATION
               type: string
               example: "LOKASI"
         geometry:
-          type: object
+          type: 
           properties:
             type:
               type: string
