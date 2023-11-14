@@ -11,7 +11,7 @@ info:
   license:
     name: Akbar Backend
     url: https://pkg.go.dev/github.com/KOCOKERZ/BACKEND_GIS
-  version: 0.1.3
+  version: 0.1.4
 externalDocs:
   description: Repo GCF
   url: https://pkg.go.dev/github.com/KOCOKERZ/BACKEND_GIS
