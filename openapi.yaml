@@ -2,7 +2,9 @@ openapi: 3.0.3
 info:
   title: DOKUMEN API GIS AKBAR - OpenAPI 3.0
   description: >-
-    Kumpulan Dokumen API AKBAR
+    Jelaskan disini apa saja yang perlu dijelaskan
+    termasuk informasi yang diperlukan untuk dinilai
+    term of service isi dari link repo dari swagger ini
   termsOfService: https://github.com/KOCOKERZ/swagger
   contact:
     email: fitrahaliakbar@gmail.com
@@ -14,7 +16,7 @@ externalDocs:
   description: Repo GCF
   url: https://pkg.go.dev/github.com/KOCOKERZ/BACKEND_GIS
 servers:
-  - url: https://asia-southeast2-core-advice-401502.cloudfunctions.net
+  - url: https://asia-southeast2-core-advice-401502.cloudfunctions.net/
 tags:
   - name: Create GIS
     description: Data Geo Spasial
@@ -61,13 +63,13 @@ components:
           type: string
           example: "Feature"
         properties:
-          type: "Feature"
+          type: object
           properties:
-            name: LOCATION
+            name:
               type: string
               example: "LOKASI"
         geometry:
-          type: 
+          type: object
           properties:
             type:
               type: string
