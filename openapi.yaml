@@ -67,16 +67,13 @@ components:
           properties:
             name:
               type: string
-              example: "LOCATION"
+              example: "Nama Locationn"
         geometry:
           type: object
           properties:
             coordinates:
               type: array
-              items:
-                - type: array
-                  items:
-                    - [125.6, 10.1]
+              example: [ [133.6, 114.1] ]
             type:
               type: string
               example: "Point"
